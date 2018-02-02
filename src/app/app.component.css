@@ -1,0 +1,114 @@
+div {    
+    font-size: 5vw;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: grid;   
+    color: #fff;
+}
+
+.r1 {
+    display: inline-grid;
+    grid-template-columns: 15vw 75vw 10vw;
+    background-color: rgba(0,0,0,0.95);
+}
+
+.r2 {
+    display: inline-grid;
+    grid-template-rows: auto;
+    background-color: rgba(0,0,0,0.95);
+}
+
+.r3 {
+    display: inline-grid;
+    grid-template-columns: 15vw 85vw;
+    background-color: rgba(0,0,0,0.95);
+}
+
+.r4 {
+    display: inline-grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+}
+
+.r5 {
+    display: inline-grid;
+    grid-template-columns: 75vw 25vw;
+}
+
+.rr1 {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;   
+}
+
+.header {
+    height: 5vh;  
+}
+
+.screen-wrapper {
+    height: 15vh;
+}
+
+.mode, .current-calculation {
+    height: 15vh
+}
+
+.math-button {
+    height: 13vh;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.math-button span {
+    margin: 0 auto;
+    display: table;
+    vertical-align: middle;
+    position: relative;
+    top: 38%;
+}
+
+.sidebar-button i, .voice-button i {
+    padding: 5px 8px;
+}
+
+.mode-text {
+    background-color: rgba(255,255,255,0.45);
+    padding: 5px 8px;
+    text-align: center;
+    display: inline-block;
+    top: 60%;
+    position: relative;
+    left: 30%;
+    font-size: 3.5vw;
+}
+
+/** **/
+.adjust-height {
+    height: 26vh;   
+}
+
+.rm-border-right {
+    border-right: none;
+}
+
+.bg1 {
+    background-color: rgba(0,0,0,0.93);
+}
+
+.bg2 {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.fs-adjust {
+    font-size: 4.2vw;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+
+
+
+
+
