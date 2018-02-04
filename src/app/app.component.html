@@ -10,7 +10,9 @@
     </div>
     <div class="r2">
       <div class="screen-wrapper">
-
+          <span class="equation-screen">
+                {{eqStr}}
+          </span>        
       </div>
     </div>
     <div class="r3">      
@@ -21,28 +23,28 @@
     </div>
     <div class="r4">
       <div class="math-button bg1">
-        <span class="btn">""</span>
+        <span class="btn">C</span>
       </div>
-      <div class="math-button bg1">
+      <div class="math-button bg1" [ngClass]="{'disbalefunction' : isClassVisible }">
           <span class="btn">/</span>
       </div>
-      <div class="math-button bg1">
+      <div class="math-button bg1" [ngClass]="{'disbalefunction' : isClassVisible }">
           <span class="btn">X</span>
       </div>
       <div class="math-button bg1">
           <span class="btn">Del</span>
       </div>
-      <div class="math-button bg2">
-          <span class="btn">1</span>
+      <div class="math-button bg2" (click)="equation(one); setClassFalse()">
+          <span class="btn" #one>1</span>
       </div>
-      <div class="math-button bg2">
-          <span class="btn">2</span>
+      <div class="math-button bg2" (click)="equation(two); setClassFalse()">
+          <span class="btn" #two>2</span>
       </div>
       <div class="math-button bg2">
           <span class="btn">3</span>
       </div>
-      <div class="math-button bg1">
-          <span class="btn">-</span>
+      <div class="math-button bg1" (click)="equation(minus); setClassTrue()" [ngClass]="{'disbalefunction' : isClassVisible }">
+          <span class="btn" #minus>-</span>
       </div>
       <div class="math-button bg2">
           <span class="btn">4</span>
@@ -53,8 +55,8 @@
       <div class="math-button bg2">
           <span class="btn">6</span>
       </div>
-      <div class="math-button bg1">
-          <span class="btn">+</span>
+      <div class="math-button bg1" (click)="equation(plus); setClassTrue()" [ngClass]="{'disbalefunction' : isClassVisible }"> 
+          <span class="btn" #plus>+</span>
       </div>
     </div>
     <div class="r5">
@@ -68,7 +70,7 @@
         <div class="math-button bg2">
             <span class="btn">9</span>
         </div>
-        <div class="math-button bg2">
+        <div class="math-button bg2" [ngClass]="{'disbalefunction' : isClassVisible }">
             <span class="btn fs-adjust">%</span>
         </div>
         <div class="math-button bg2">

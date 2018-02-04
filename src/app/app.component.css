@@ -57,6 +57,7 @@ div {
     height: 13vh;
     border-top: 1px solid #000;
     border-right: 1px solid #000;
+    cursor: pointer;
 }
 
 .math-button span {
@@ -107,8 +108,15 @@ div {
     transform: scaleX(-1);
 }
 
+.disbalefunction { pointer-events: none; }
 
-
-
-
+.equation-screen {
+    padding: 7px 14px;
+    display: inline-block;
+    width: 100vw;
+    max-height: 70px;
+    word-wrap: break-word;
+    overflow-x: scroll;
+    font-size: 25px; 
+}
 
