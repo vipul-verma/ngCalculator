@@ -10,7 +10,7 @@
     </div>
     <div class="r2">
       <div class="screen-wrapper">
-          <span class="equation-screen">
+          <span class="equation-screen" #eq>
                 {{eqStr}}
           </span>        
       </div>
@@ -31,7 +31,7 @@
       <div class="math-button bg1" (click)="equation(multiply); setClassTrue(); setDotFalse()" [ngClass]="{'disablefunction' : isClassVisible }">
           <span class="btn hidden" #multiply>*</span><span class="btn">x</span>
       </div>
-      <div class="math-button bg1">
+      <div class="math-button bg1" (click)="clearLast()">
           <span class="btn">Del</span>
       </div>
       <div class="math-button bg2" (click)="equation(one); setClassFalse()">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ca-root',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('eq') eq;
   eqStr = '';
   isClassVisible = true;
   notVisible = false;
@@ -43,6 +44,10 @@ export class AppComponent {
     this.eqStr = '';
     this.isClassVisible = true;
     this.isTrue = true;
+  }
+
+  clearLast() {
+    this.eqStr = this.eqStr.substring(0, this.eqStr.length - 1);
   }
 
 }
