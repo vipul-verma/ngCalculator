@@ -1,20 +1,17 @@
-import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ca-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   eqStr = '';
-  isClassVisible = false;
-  constructor(private elRef: ElementRef) {  }
+  isClassVisible = true;
+  notVisible = false;
+  isTrue = true;
 
-  ngAfterViewInit() {
-    const elem = this.elRef.nativeElement.querySelector('.math-button');
-    console.log(elem);
-
-  }
+  constructor() {  }
 
   equation(e) {
     const str = e.innerHTML;
@@ -28,6 +25,24 @@ export class AppComponent implements AfterViewInit {
 
   setClassFalse() {
     this.isClassVisible = false;
+  }
+
+  setDotTrue() {
+    this.notVisible = true;
+  }
+
+  setDotFalse() {
+    this.notVisible = false;
+  }
+
+  setMinusFalse() {
+    this.isTrue = false;
+  }
+
+  clearAll() {
+    this.eqStr = '';
+    this.isClassVisible = true;
+    this.isTrue = true;
   }
 
 }

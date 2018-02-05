@@ -108,7 +108,15 @@ div {
     transform: scaleX(-1);
 }
 
-.disbalefunction { pointer-events: none; }
+.disablefunction { pointer-events: none; }
+
+.diablefunction2 {
+    pointer-events: none;
+}
+
+.setMinus {
+    pointer-events: visible;
+}
 
 .equation-screen {
     padding: 7px 14px;
@@ -118,5 +126,9 @@ div {
     word-wrap: break-word;
     overflow-x: scroll;
     font-size: 25px; 
+}
+
+.hidden {
+    display: none !important;
 }
 
