@@ -58,6 +58,18 @@ div {
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+
+.setGradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff832+0,ffd230+50,fff789+100 */
+background: rgb(255,248,50); /* Old browsers */
+background: -moz-linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff832', endColorstr='#fff789',GradientType=0 ); /* IE6-9 */
+color: #000;
+border: 1px solid #f5ff50;
 }
 
 .math-button span {
@@ -108,9 +120,9 @@ div {
     transform: scaleX(-1);
 }
 
-.disablefunction { pointer-events: none; }
+.disablebtn { pointer-events: none; }
 
-.diablefunction2 {
+.diableminusbtn {
     pointer-events: none;
 }
 
@@ -131,4 +143,6 @@ div {
 .hidden {
     display: none !important;
 }
+
+
 

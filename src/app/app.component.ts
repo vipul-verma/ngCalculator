@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ca-root',
@@ -6,13 +6,13 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('eq') eq;
   eqStr = '';
   isClassVisible = true;
   notVisible = false;
   isTrue = true;
+  gradient = false;
 
-  constructor() {  }
+  constructor() { }
 
   equation(e) {
     const str = e.innerHTML;
