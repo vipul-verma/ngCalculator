@@ -11,7 +11,7 @@
     <div class="r2">
       <div class="screen-wrapper">
           <span class="equation-screen">
-                {{eqStr}}
+                {{output}}
           </span>        
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="mode">
         <span class="mode-text">M</span>
       </div>
-      <div class="current-calculation"></div>      
+      <div class="current-calculation">{{ans}}</div>      
     </div>
     <div class="r4">
       <div class="math-button bg1" (click)="clearAll();" [ngClass]="{'setGradient': gradient}">
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="rr2">
-        <div class="math-button bg1 adjust-height" [ngClass]="{'disablebtn' : isClassVisible }">
+        <div class="math-button bg1 adjust-height" (click)="solveEquation()" [ngClass]="{'disablebtn' : isClassVisible }">
             <span class="btn">=</span>
         </div>
       </div>

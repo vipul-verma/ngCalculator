@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   eqStr = '';
+  ans: any = '';
+  output = '';
   isClassVisible = true;
   notVisible = false;
   isTrue = true;
@@ -18,6 +20,11 @@ export class AppComponent {
     const str = e.innerHTML;
     this.eqStr += str;
     console.log(this.eqStr);
+  }
+
+  solveEquation() {
+    this.ans = eval(this.eqStr);
+    this.output = this.ans;
   }
 
   setClassTrue() {
