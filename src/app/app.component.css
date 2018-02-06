@@ -141,7 +141,7 @@ div {
     max-height: 70px;
     word-wrap: break-word;
     overflow-x: scroll;
-    font-size: 21px; 
+    font-size: 25px; 
 }
 
 .hidden {
@@ -154,6 +154,11 @@ div {
 	font-size: 20vw;
     right: 0;
     max-width: 291px;
+}
+
+.adjust-brakets {
+    font-size: 9px;
+    top: 42%;
 }
 
 
