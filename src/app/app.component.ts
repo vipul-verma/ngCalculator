@@ -101,6 +101,7 @@ export class AppComponent {
     this.ans = '';
     this.isClassVisible = true;
     this.isTrue = true;
+    this.setNumber = false;
   }
 
   clearLast() {
