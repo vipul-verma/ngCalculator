@@ -33,7 +33,7 @@
       <div class="math-button bg1" (click)="equation(multiply); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }">
           <span class="btn hidden" #multiply>*</span><span class="btn">x</span>
       </div>
-      <div class="math-button bg1" (click)="clearLast()">
+      <div class="math-button bg1" (click)="clearLast(); setDotTrue()">
           <span class="btn">Del</span>
       </div>
       <div class="math-button bg2" (click)="equation(one); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
@@ -73,7 +73,7 @@
             <span class="btn" #nine>9</span>
         </div>
         <div class="math-button bg2" (click)="brakets(); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
-            <span class="btn fs-adjust adjust-brakets">( )</span>
+            <span class="btn">B</span>
         </div>
         <div class="math-button bg2" (click)="equation(zero); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #zero>0</span>

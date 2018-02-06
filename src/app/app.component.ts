@@ -13,7 +13,7 @@ import { setTimeout } from 'timers';
         color: '#000'
       })),
       state('active', style({
-        backgroundColor: 'rgba(0,0,0,0.9)'
+        backgroundColor: 'rgba(0,0,0,0.93)'
       })),
       transition('active => inactive', animate('0.5s linear')),
       transition('inactive => active', animate('0.5s linear'))

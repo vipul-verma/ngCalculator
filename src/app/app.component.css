@@ -1,3 +1,5 @@
+@media (max-width:768px) {
+
 div {    
     font-size: 5vw;
     font-weight: 700;
@@ -116,7 +118,7 @@ div {
 
 .diableminusbtn {
     pointer-events: none;
-    background-color: #999;
+    background-color: rgb(12, 12, 12);
 }
 
 .disableNumber {
@@ -156,10 +158,6 @@ div {
     max-width: 291px;
 }
 
-.adjust-brakets {
-    font-size: 9px;
-    top: 42%;
+
+
 }
-
-
-
