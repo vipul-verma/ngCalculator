@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { setTimeout } from 'timers';
+// import { setTimeout } from 'timers';
 
 @Component({
   selector: 'ca-root',
@@ -30,6 +30,7 @@ export class AppComponent {
   allowCalculation = false;
   active = true;
   setNumber = false;
+  setBracket = false;
   
 
   constructor() {}
@@ -74,6 +75,10 @@ export class AppComponent {
 
   setClassFalse() {
     this.isClassVisible = false;
+  }
+
+  setBracketTrue() {
+    this.setBracket = true;
   }
 
   setDotTrue() {

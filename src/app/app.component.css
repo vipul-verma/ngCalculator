@@ -126,6 +126,11 @@ div {
     background-color: rgb(12, 12, 12);
 }
 
+.disableB {
+    pointer-events: none;
+    background-color: rgb(12, 12, 12);
+}
+
 .enablebtns {
     pointer-events: visible;
     background-color: rgba(0,0,0,0.93);

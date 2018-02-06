@@ -72,7 +72,7 @@
         <div class="math-button bg2" (click)="equation(nine); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #nine>9</span>
         </div>
-        <div class="math-button bg2" (click)="brakets(); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
+        <div class="math-button bg2" (click)="brakets(); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'disableB' : setBracket }">
             <span class="btn">B</span>
         </div>
         <div class="math-button bg2" (click)="equation(zero); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
