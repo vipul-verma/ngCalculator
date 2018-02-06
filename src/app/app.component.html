@@ -11,7 +11,7 @@
     <div class="r2">
       <div class="screen-wrapper">
           <span class="equation-screen">
-                {{output}}
+                {{eqStr}}
           </span>        
       </div>
     </div>
@@ -19,69 +19,71 @@
       <div class="mode">
         <span class="mode-text">M</span>
       </div>
-      <div class="current-calculation">{{ans}}</div>      
+      <div class="current-calculation">
+          <span class="answer">{{ans}}</span>
+      </div>      
     </div>
     <div class="r4">
-      <div class="math-button bg1" (click)="clearAll();" [ngClass]="{'setGradient': gradient}">
+      <div class="math-button bg1" (click)="clearAll(); setCalculationFalse(); toggleActive()" [@testAnimation]="statename">
         <span class="btn">C</span>
       </div>
-      <div class="math-button bg1" (click)="equation(divide); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
+      <div class="math-button bg1" (click)="equation(divide); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }">
           <span class="btn" #divide>/</span>
       </div>
-      <div class="math-button bg1" (click)="equation(multiply); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
+      <div class="math-button bg1" (click)="equation(multiply); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }">
           <span class="btn hidden" #multiply>*</span><span class="btn">x</span>
       </div>
       <div class="math-button bg1" (click)="clearLast()">
           <span class="btn">Del</span>
       </div>
-      <div class="math-button bg2" (click)="equation(one); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(one); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #one>1</span>
       </div>
-      <div class="math-button bg2" (click)="equation(two); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(two); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #two>2</span>
       </div>
-      <div class="math-button bg2" (click)="equation(three); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(three); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #three>3</span>
       </div>
-      <div class="math-button bg1" (click)="equation(minus); setClassTrue(); setDotFalse(); setMinusFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'setMinus' : isTrue }">
+      <div class="math-button bg1" (click)="equation(minus); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'setMinus' : isTrue, 'enablebtns' : allowCalculation  }">
           <span class="btn" #minus>-</span> 
       </div>
-      <div class="math-button bg2" (click)="equation(four); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(four); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #four>4</span>
       </div>
-      <div class="math-button bg2" (click)="equation(five); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(five); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #five>5</span>
       </div>
-      <div class="math-button bg2" (click)="equation(six); setClassFalse()">
+      <div class="math-button bg2" (click)="equation(six); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
           <span class="btn" #six>6</span>
       </div>
-      <div class="math-button bg1" (click)="equation(plus); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }"> 
+      <div class="math-button bg1" (click)="equation(plus); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }"> 
           <span class="btn" #plus>+</span>
       </div>
     </div>
     <div class="r5">
       <div class="rr1">
-        <div class="math-button bg2" (click)="equation(seven); setClassFalse()">
+        <div class="math-button bg2" (click)="equation(seven); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #seven>7</span>
         </div>
-        <div class="math-button bg2" (click)="equation(eight); setClassFalse()">
+        <div class="math-button bg2" (click)="equation(eight); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #eight>8</span>
         </div>
-        <div class="math-button bg2" (click)="equation(nine); setClassFalse()">
+        <div class="math-button bg2" (click)="equation(nine); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #nine>9</span>
         </div>
-        <div class="math-button bg2" (click)="equation(percentile); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
-            <span class="btn fs-adjust" #percentile>%</span>
+        <div class="math-button bg2" (click)="brakets(); setClassTrue(); setDotFalse()" [ngClass]="{'disablebtn' : isClassVisible }">
+            <span class="btn fs-adjust">( )</span>
         </div>
-        <div class="math-button bg2" (click)="equation(zero); setClassFalse()">
+        <div class="math-button bg2" (click)="equation(zero); setClassFalse()" [ngClass]="{'disableNumber': setNumber}">
             <span class="btn" #zero>0</span>
         </div>
-        <div class="math-button bg2" (click)="equation(dot); setClassTrue(); setDotTrue()" [ngClass]="{'disablebtn' : isClassVisible, 'diableminusbtn' : notVisible }">
+        <div class="math-button bg2" (click)="equation(dot); setClassTrue(); setDotTrue(); setMinusFalse(); setCalculationFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'diableminusbtn' : notVisible }">
             <span class="btn" #dot>.</span>
         </div>
       </div>
       <div class="rr2">
-        <div class="math-button bg1 adjust-height" (click)="solveEquation()" [ngClass]="{'disablebtn' : isClassVisible }">
+        <div class="math-button bg1 adjust-height" (click)="solveEquation()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }">
             <span class="btn">=</span>
         </div>
       </div>

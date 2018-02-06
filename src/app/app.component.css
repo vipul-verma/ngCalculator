@@ -61,17 +61,6 @@ div {
     transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
 
-.setGradient {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff832+0,ffd230+50,fff789+100 */
-background: rgb(255,248,50); /* Old browsers */
-background: -moz-linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgb(255, 231, 50) 0%,rgba(255,210,48,1) 50%,rgb(255, 231, 50) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff832', endColorstr='#fff789',GradientType=0 ); /* IE6-9 */
-color: #000;
-border: 1px solid #f5ff50;
-}
-
 .math-button span {
     margin: 0 auto;
     display: table;
@@ -120,14 +109,29 @@ border: 1px solid #f5ff50;
     transform: scaleX(-1);
 }
 
-.disablebtn { pointer-events: none; }
+.disablebtn { 
+    pointer-events: none;
+    background-color: rgb(12, 12, 12);
+}
 
 .diableminusbtn {
     pointer-events: none;
+    background-color: #999;
+}
+
+.disableNumber {
+    pointer-events: none;
+    background-color: rgb(12, 12, 12);
+}
+
+.enablebtns {
+    pointer-events: visible;
+    background-color: rgba(0,0,0,0.93);
 }
 
 .setMinus {
     pointer-events: visible;
+    background-color: rgba(0,0,0,0.93);
 }
 
 .equation-screen {
@@ -137,11 +141,19 @@ border: 1px solid #f5ff50;
     max-height: 70px;
     word-wrap: break-word;
     overflow-x: scroll;
-    font-size: 25px; 
+    font-size: 21px; 
 }
 
 .hidden {
     display: none !important;
+}
+
+.answer {
+	position: absolute;
+	padding: 5px 10px;
+	font-size: 20vw;
+    right: 0;
+    max-width: 291px;
 }
 
 
