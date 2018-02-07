@@ -1,0 +1,37 @@
+.bg1 {
+   background-color: rgba(0,0,0,0.93);
+}
+
+.bg2 {
+   background-color: rgba(0,0,0,0.9);
+}
+
+.disablebtn { 
+   pointer-events: none;
+   background-color: rgb(12, 12, 12);
+}
+
+.diableminusbtn {
+   pointer-events: none;
+   background-color: rgb(12, 12, 12);
+}
+
+.disableNumber {
+   pointer-events: none;
+   background-color: rgb(12, 12, 12);
+}
+
+.disableB {
+   pointer-events: none;
+   background-color: rgb(12, 12, 12);
+}
+
+.enablebtns {
+   pointer-events: visible;
+   background-color: rgba(0,0,0,0.93);
+}
+
+.setMinus {
+   pointer-events: visible;
+   background-color: rgba(0,0,0,0.93);
+}

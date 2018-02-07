@@ -1,6 +1,6 @@
-<div class="wrapper">
+<div class="wrapper">       
     <div class="r1">
-        <div class="sidebar-button">
+        <div class="sidebar-button" (click)="toggleSidebar()">
             <i class="fa fa-bars"></i>
         </div>
         <div class="header"></div>
@@ -8,6 +8,33 @@
             <i class="fa fa-bullhorn flip"></i>
         </div>
     </div>
+    <div class="sidebar" [ngClass]="{'dsidebar': showSidebar}"> 
+        <div class="app-heading">
+            Calculator
+        </div>
+        <div class="settings">
+            <ul>
+                <li>
+                    <p>Themes</p>
+                </li>
+                <li (click)="setThemeWhite()">
+                    <p><span class="white"></span></p>
+                </li>
+                <li (click)="setThemeGrey()">
+                    <p><span class="grey"></span></p>
+                </li>
+                <li (click)="setThemeDefault()">
+                    <p><span class="default"></span></p>
+                </li>
+                <li (click)="setThemeRed()">
+                    <p><span class="red"></span></p>
+                </li>
+                <li>
+                    <p><span class="blue"></span></p>
+                </li>
+            </ul>
+        </div>
+    </div> 
     <div class="r2">
       <div class="screen-wrapper">
           <span class="equation-screen">

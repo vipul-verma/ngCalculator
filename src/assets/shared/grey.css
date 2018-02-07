@@ -1,0 +1,54 @@
+.wrapper {
+   display: grid;   
+   color: #242424 !important;
+}
+
+.sidebar-button i, .voice-button i {
+   color: #242424 !important;
+}
+
+.sidebar {
+	background-color: rgba(107, 107, 107, 0.9) !important;
+}
+
+.r1, .r2, .r3 {
+   background-color: rgb(117, 117, 117) !important;
+}
+
+.bg1 {
+   background-color: rgb(180, 180, 180) !important;
+}
+
+.bg2 {
+   background-color: rgb(180, 180, 180) !important;;
+}
+
+.disablebtn { 
+   pointer-events: none;
+   background-color: rgb(136, 136, 136) !important;;
+}
+
+.diableminusbtn {
+   pointer-events: none;
+   background-color: rgb(136, 136, 136) !important;;
+}
+
+.disableNumber {
+   pointer-events: none;
+   background-color: rgb(136, 136, 136)!important;;
+}
+
+.disableB {
+   pointer-events: none;
+   background-color: rgb(136, 136, 136) !important;;
+}
+
+.enablebtns {
+   pointer-events: visible;
+   background-color: rgba(172, 172, 172, 0.93);
+}
+
+.setMinus {
+   pointer-events: visible;
+   background-color: rgba(172, 172, 172, 0.93);
+}

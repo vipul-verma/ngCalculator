@@ -10,6 +10,36 @@ div {
     color: #fff;
 }
 
+.sidebar {
+	position: absolute;
+	background-color: rgba(24, 24, 24, 0.9);
+	height: 100vh;
+	z-index: 99999;
+	margin-top: 5.4vh;
+	width: 36vw;
+}
+
+.app-heading {
+	font-size: 4.5vw !important;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.settings ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.settings ul li{
+    font-size: 4vw !important;
+    padding: 8px 10px;
+}
+
+.settings ul li p {
+    margin: 0;
+}
+
 .r1 {
     display: inline-grid;
     grid-template-columns: 15vw 75vw 10vw;
@@ -73,6 +103,7 @@ div {
 
 .sidebar-button i, .voice-button i {
     padding: 5px 8px;
+    cursor: pointer;
 }
 
 .mode-text {
@@ -161,6 +192,50 @@ div {
 	font-size: 20vw;
     right: 0;
     max-width: 291px;
+}
+
+.white {
+    background-color: #fff;
+    width: 30vw;
+    height: 3vh;
+    display: block;
+    cursor: pointer;
+}
+
+.grey {
+    background-color: rgb(102, 102, 102);
+    width: 30vw;
+    height: 3vh;
+    display: block;  
+    cursor: pointer;
+}
+
+.default {
+    background-color: rgb(32, 32, 32);
+    width: 30vw;
+    height: 3vh;
+    display: block; 
+    cursor: pointer;
+}
+
+.red {
+    background-color: rgb(241, 0, 52);
+    width: 30vw;
+    height: 3vh;
+    display: block; 
+    cursor: pointer; 
+}
+
+.blue {
+    background-color: rgb(1, 154, 255);
+    width: 30vw;
+    height: 3vh;
+    display: block; 
+    cursor: pointer; 
+}
+
+.dsidebar {
+    display: none;
 }
 
 

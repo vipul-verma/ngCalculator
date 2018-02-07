@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-// import { setTimeout } from 'timers';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'ca-root',
@@ -30,14 +30,40 @@ export class AppComponent {
   allowCalculation = false;
   active = true;
   setNumber = false;
-  setBracket = false;
+  showSidebar = true;
   
 
-  constructor() {}
+  constructor(@Inject(DOCUMENT) private document) {
+    console.log(document)
+  }
 
   get statename() {
     return this.active ? 'active' : 'inactive'
   }
+
+  setThemeWhite() {
+    this.document.getElementById('theme').setAttribute('href','./assets/shared/white.css');
+    this.showSidebar = true;
+  }
+
+  setThemeDefault() {
+    this.document.getElementById('theme').setAttribute('href','./assets/shared/default.css');
+    this.showSidebar = true;
+  }
+
+  setThemeGrey() {
+    this.document.getElementById('theme').setAttribute('href','./assets/shared/grey.css');
+    this.showSidebar = true;
+  }
+
+  setThemeRed() {
+    this.document.getElementById('theme').setAttribute('href','./assets/shared/red.css');
+    this.showSidebar = true;
+  }
+
+  // changeTheme() {
+  //   this.document.getElementById('theme').setAttribute('href','./assets/shared/blue.css')
+  // }
 
   toggleActive() {
     return new Promise(resolve => {
@@ -46,6 +72,10 @@ export class AppComponent {
       },500)
       this.active = false; 
     })    
+  }
+
+  toggleSidebar() {
+    this.showSidebar = !this.showSidebar;
   }
 
   equation(e) {
@@ -75,10 +105,6 @@ export class AppComponent {
 
   setClassFalse() {
     this.isClassVisible = false;
-  }
-
-  setBracketTrue() {
-    this.setBracket = true;
   }
 
   setDotTrue() {
