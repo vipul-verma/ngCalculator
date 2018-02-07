@@ -12,11 +12,14 @@ div {
 
 .sidebar {
 	position: absolute;
-	background-color: rgba(24, 24, 24, 0.9);
+	background-color: rgba(24, 24, 24, 1);
 	height: 100vh;
 	z-index: 99999;
 	margin-top: 5.4vh;
 	width: 36vw;
+	border-right: 1px solid rgba(255,255,255, 0.03);
+    box-shadow: 0px 2px 32px 0px inset rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(255,255,255,0.03);
 }
 
 .app-heading {
@@ -44,6 +47,7 @@ div {
     display: inline-grid;
     grid-template-columns: 15vw 75vw 10vw;
     background-color: rgba(0,0,0,0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .r2 {
