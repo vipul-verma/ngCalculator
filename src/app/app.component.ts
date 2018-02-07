@@ -61,6 +61,11 @@ export class AppComponent {
     this.showSidebar = true;
   }
 
+  setThemeBlue() {
+    this.document.getElementById('theme').setAttribute('href','./assets/shared/blue.css');
+    this.showSidebar = true;
+  }
+
   // changeTheme() {
   //   this.document.getElementById('theme').setAttribute('href','./assets/shared/blue.css')
   // }
