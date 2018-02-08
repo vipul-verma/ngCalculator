@@ -1,28 +1,14 @@
 import { Component, Inject } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'ca-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [
-    trigger('testAnimation', [
-      state('inactive', style({
-        backgroundColor: 'rgb(255, 216, 0)',
-        color: '#000'
-      })),
-      state('active', style({
-        backgroundColor: 'rgba(0,0,0,0.93)'
-      })),
-      transition('active => inactive', animate('0.5s linear')),
-      transition('inactive => active', animate('0.5s linear'))
-    ])
-  ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   eqStr = '';
-  ans: any = '';
+  ans: any = '0';
   output = '';
   isClassVisible = true;
   notVisible = false;
@@ -33,13 +19,7 @@ export class AppComponent {
   showSidebar = true;
   
 
-  constructor(@Inject(DOCUMENT) private document) {
-    console.log(document)
-  }
-
-  get statename() {
-    return this.active ? 'active' : 'inactive'
-  }
+  constructor(@Inject(DOCUMENT) private document) { }
 
   setThemeWhite() {
     this.document.getElementById('theme').setAttribute('href','./assets/shared/white.css');
@@ -66,10 +46,6 @@ export class AppComponent {
     this.showSidebar = true;
   }
 
-  // changeTheme() {
-  //   this.document.getElementById('theme').setAttribute('href','./assets/shared/blue.css')
-  // }
-
   toggleActive() {
     return new Promise(resolve => {
       setTimeout(()=>{
@@ -91,7 +67,6 @@ export class AppComponent {
 
   solveEquation() {
     this.ans = eval(this.eqStr);
-    // this.eqStr = eval(this.eqStr);
   }
 
   brakets() {
@@ -134,7 +109,7 @@ export class AppComponent {
 
   clearAll() {
     this.eqStr = '';
-    this.ans = '';
+    this.ans = '0';
     this.isClassVisible = true;
     this.isTrue = true;
     this.setNumber = false;

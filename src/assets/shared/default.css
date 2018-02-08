@@ -35,3 +35,8 @@
    pointer-events: visible;
    background-color: rgba(0,0,0,0.93);
 }
+
+.math-button:active {
+   background-color: #00c0ff !important;
+   color: #000;
+}

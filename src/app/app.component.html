@@ -51,7 +51,7 @@
       </div>      
     </div>
     <div class="r4">
-      <div class="math-button bg1" (click)="clearAll(); setCalculationFalse(); toggleActive()" [@testAnimation]="statename">
+      <div class="math-button bg1" (click)="clearAll(); setCalculationFalse(); toggleActive()">
         <span class="btn">C</span>
       </div>
       <div class="math-button bg1" (click)="equation(divide); setClassTrue(); setDotFalse(); setMinusFalse(); setCalculationFalse(); setNumberFalse()" [ngClass]="{'disablebtn' : isClassVisible, 'enablebtns' : allowCalculation }">
